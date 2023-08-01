@@ -17,3 +17,5 @@ extern int num_of_book_count;
 
 void add_book();
 void display_book();
+void search_book(char*);
+void search_book_isbn(int);

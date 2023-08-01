@@ -19,3 +19,5 @@ extern int num_of_hardware_count;
 
 void add_hardware();
 void display_hardware();
+void Filter_Hardware_with_type(char*);
+void Filter_Hardware_with_ROM(int);

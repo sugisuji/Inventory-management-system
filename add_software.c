@@ -8,15 +8,15 @@ void add_software()
 	char *os = (char *)malloc(os_size * sizeof(char));
 	int eat_new_line;
 
-	printf("\nenter Serial Number\n");
+	printf("\n=====> Enter Serial Number\n");
 	scanf("%d", &srl_num);
-	printf("\nenter Software name\n");
+	printf("\n=====> Enter Software name\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", sftwr_name);
-	printf("\nenter license type\n");
+	printf("\n=====> Enter license type\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", licensetype);
-	printf("\nenter Software OS\n");
+	printf("\n=====> Enter Software OS\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", os);
 

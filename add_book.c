@@ -8,14 +8,14 @@ void add_book()
 	char *book_title = (char *)malloc(title_size * sizeof(char));
 	int eat_new_line;
 	
-	printf("\nenter ISBN number\n");
+	printf("\n=====> Enter ISBN number\n");
 	scanf("%d", &isbn);
-	printf("\nenter Serial Number\n");
+	printf("\n=====> Enter Serial Number\n");
 	scanf("%d", &srl_num);
-	printf("\nenter Author name\n");
+	printf("\n=====> Enter Author name\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", author);
-	printf("\nenter Book Title\n");
+	printf("\n=====> Enter Book Title\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", book_title);
 

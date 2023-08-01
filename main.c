@@ -6,7 +6,8 @@ int main()
 	
 	while(1)
 	{
-		printf("\nEnter your choice :: EXIT = 0\nBOOK = 1 :: HARDWARE = 2 :: SOFTWARE = 3\n ");
+		printf("\n>>>>>>>>>> Inventory Management System <<<<<<<<<<\n");
+		printf("\nEXIT = 0 :: BOOK = 1 :: HARDWARE = 2 :: SOFTWARE = 3\n ");
 		scanf("%d", &choice);
 		
 		if(choice == 0)
@@ -23,11 +24,11 @@ int main()
 				break;
 		
 			case 3:
-//				software();
+				software();
 				break;
 		
 			default :
-				printf("\nenter the right choice\n");
+				printf("\n@@@@@@@@@@@@@@@@@ enter the right choice @@@@@@@@@@@@@@@@@\n");
 		}
 	}
 }

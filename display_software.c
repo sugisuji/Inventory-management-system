@@ -4,7 +4,7 @@ void display_software()
 {
 	if(sftwr_head == '\0')
 	{
-		printf("\n No Software present\n");
+		printf("\n@@@@@@@@@@@@@@@@@ No Software present @@@@@@@@@@@@@@@@@\n");
 
 	} else {
 		

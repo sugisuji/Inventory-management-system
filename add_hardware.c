@@ -3,26 +3,26 @@
 void add_hardware()
 {
 	int srl_num;
-	float romsize;
-	float ramsize;
+	int romsize;
+	int ramsize;
 	char *hrdwr_name = (char *)malloc(hrdwr_name_size * sizeof(char));
 	char *hrdwr_type = (char *)malloc(hrdwr_type_size * sizeof(char));
 	char *os = (char *)malloc(os_size * sizeof(char));
 	int eat_new_line;
 
-	printf("\nenter Serial Number\n");
+	printf("\n=====> Enter Serial Number\n");
 	scanf("%d", &srl_num);
-	printf("\nenter ROM size\n");
-	scanf("%f", &romsize);
-	printf("\nenter RAM size\n");
-	scanf("%f", &ramsize);
-	printf("\nenter Hardware name\n");
+	printf("\n=====> Enter ROM size\n");
+	scanf("%d", &romsize);
+	printf("\n=====> Enter RAM size\n");
+	scanf("%d", &ramsize);
+	printf("\n=====> Enter Hardware name\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", hrdwr_name);
-	printf("\nenter Hardware type\n");
+	printf("\n=====> Enter Hardware type\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", hrdwr_type);
-	printf("\nenter Hardware OS\n");
+	printf("\n=====> Enter Hardware OS\n");
 	scanf("%d", eat_new_line);
 	scanf("%[^\n]", os);
 

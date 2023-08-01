@@ -4,7 +4,7 @@ void display_book()
 {
 	if(head == '\0')
 	{
-		printf("\n no book present\n");
+		printf("\n@@@@@@@@@@@@@@@@@ No book present @@@@@@@@@@@@@@@@@\n");
 
 	} else {
 		
