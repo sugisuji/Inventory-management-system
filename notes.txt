@@ -1,0 +1,2 @@
+DOS emulator
+Gtk+ is the best way to create a Graphical User Interface (GUI) in C
