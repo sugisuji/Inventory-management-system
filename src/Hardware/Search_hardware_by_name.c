@@ -1,4 +1,4 @@
-#include "hardware.h"
+#include "../header/hardware.h"
 
 void Search_hardware_by_name(char *hrdwr_name)
 {

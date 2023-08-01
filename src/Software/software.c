@@ -1,4 +1,4 @@
-#include "software.h"
+#include "../header/software.h"
 
 struct software *sftwr_head = '\0';
 struct software *sftwr_tail = '\0';

@@ -1,4 +1,4 @@
-#include "hardware.h"
+#include "../header/hardware.h"
 
 void display_hardware()
 {

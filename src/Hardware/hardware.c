@@ -1,4 +1,4 @@
-#include "hardware.h"
+#include "../header/hardware.h"
 
 struct hardware *hrdwr_head = '\0';
 struct hardware *hrdwr_tail = '\0';
