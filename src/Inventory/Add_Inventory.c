@@ -1,16 +1,13 @@
-#include "header/header.h"
-#include "header/inventory.h"
+#include "../header/inventory.h"
 
-int main()
+void Add_Inventory()
 {
 	int choice; 
 	
 	while(1)
 	{
-		printf("\n>>>>>>>>>> Inventory Management System <<<<<<<<<<\n");
-		printf("\nEXIT = 0 :: Add_Inventory = 1 :: Update_Inventory = 2 :: ");
-		printf("Delete_Inventory = 3  ::  Inventory_queries = 4\n");
-
+		printf("\n=======> Enter your choice which you need to add\n");
+		printf("\nEXIT = 0 :: BOOK = 1 :: HARDWARE = 2 :: SOFTWARE = 3\n ");
 		if (scanf("%d", &choice) != 1)
 		{
     		// Invalid input, clear the input buffer
@@ -25,19 +22,15 @@ int main()
 		switch(choice)
 		{
 			case 1:
-				Add_Inventory();
+				add_book();
 				break;
-			
+				
 			case 2:
-				Update_Inventory();
+				add_hardware();
 				break;
 		
 			case 3:
-				Delete_Inventory();
-				break;
-				
-			case 4:
-				Inventory_queries();
+				add_software();
 				break;
 		
 			default :

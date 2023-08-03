@@ -9,15 +9,24 @@ void add_software()
 	int eat_new_line;
 
 	printf("\n=====> Enter Serial Number\n");
-	scanf("%d", &srl_num);
+	loop1:
+	if (scanf("%d", &srl_num) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid Serial Number. Please enter a valid Serial Number.\n");
+        goto loop1;
+    }
+	
 	printf("\n=====> Enter Software name\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", sftwr_name);
+	
 	printf("\n=====> Enter license type\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", licensetype);
+	
 	printf("\n=====> Enter Software OS\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", os);
 
 	struct software *buff = (struct software*)malloc(sizeof(struct software));
@@ -38,5 +47,6 @@ void add_software()
 		buff -> next = sftwr_tail -> next;
 		sftwr_tail -> next = buff;
 		sftwr_tail = buff;
-	}	
+	}
+	printf("\n\n****** Software Added Successfully ******\n\n");
 }

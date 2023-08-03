@@ -11,19 +11,42 @@ void add_hardware()
 	int eat_new_line;
 
 	printf("\n=====> Enter Serial Number\n");
-	scanf("%d", &srl_num);
+	loop1:
+	if (scanf("%d", &srl_num) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid Serial Number. Please enter a valid Serial Number.\n");
+        goto loop1;
+    }
+    
 	printf("\n=====> Enter ROM size\n");
-	scanf("%d", &romsize);
+	loop2:
+	if (scanf("%d", &romsize) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid ROM size. Please enter a valid ROM size.\n");
+        goto loop2;
+    }
+    
 	printf("\n=====> Enter RAM size\n");
-	scanf("%d", &ramsize);
+	loop3:
+	if (scanf("%d", &ramsize) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid RAM size. Please enter a valid RAM size.\n");
+        goto loop3;
+    }
+	
 	printf("\n=====> Enter Hardware name\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", hrdwr_name);
+	
 	printf("\n=====> Enter Hardware type\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", hrdwr_type);
+	
 	printf("\n=====> Enter Hardware OS\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", os);
 
 	struct hardware *buff = (struct hardware*)malloc(sizeof(struct hardware));
@@ -48,4 +71,5 @@ void add_hardware()
 		hrdwr_tail = buff;
 	}	
 	num_of_hardware_count++;
+	printf("\n\n****** Hardware Added Successfully ******\n\n");
 }

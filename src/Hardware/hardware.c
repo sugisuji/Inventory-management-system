@@ -18,11 +18,17 @@ void hardware()
 	while(1)
 	{
 		printf("\n************* Enter your option *************\n");
-		printf("\nEXIT = 0 :: ADD_HARDWARE = 1\n"); 
-		printf("\nCheck_no_of_hardware_available = 2 :: Check_what_are_the_hardware_available = 3\n");
-		printf("\nFilter_Hardware_with_type = 4 :: Filter_Hardware_with_ROM = 5 :: Filter_Hardware_with_RAM = 6\n");
-		printf("\nFilter_Hardware_with_OS = 7 ::  Search_hardware_by_name = 8\n ");
-		scanf("%d", &option);
+		printf("\nEXIT = 0\n"); 
+		printf("\nCheck_no_of_hardware_available = 1 :: Check_what_are_the_hardware_available = 2\n");
+		printf("\nFilter_Hardware_with_type = 3 :: Filter_Hardware_with_ROM = 4 :: Filter_Hardware_with_RAM = 5\n");
+		printf("\nFilter_Hardware_with_OS = 6 ::  Search_hardware_by_name = 7\n ");
+		loop:
+		if (scanf("%d", &option) != 1)
+		{
+   		    while (getchar() != '\n');
+    	    printf("\nError: Invalid input. Please enter a valid option.\n");
+    	    goto loop;
+   		}
 		
 		if(option == 0)
 			break;
@@ -30,52 +36,60 @@ void hardware()
 		switch(option)
 		{
 			case 1:
-				add_hardware();
-				break;
-			
-			case 2:
 				printf("\n\n$$$$$$$$$$$$  %d hardwares are available  $$$$$$$$$$$$\n\n", num_of_hardware_count);
 				break;
 			
-			case 3:
+			case 2:
 				display_hardware();
 				break;
 			
-			case 4:
+			case 3:
 				printf("\n=====> Enter Hardware type\n");
-				scanf("%d", eat_new_line);
+				eat_new_line = getchar();
 				scanf("%[^\n]", hrdwr_type);
 				Filter_Hardware_with_type(hrdwr_type);
 				break;
 			
-			case 5:
+			case 4:
 				printf("\n=====> Enter ROM size\n");
-				scanf("%d", &romsize);
+				loop1:
+				if (scanf("%d", &romsize) != 1)
+				{
+   				    while (getchar() != '\n');
+    			    printf("\nError: Invalid ROM size. Please enter a valid ROM size.\n");
+    			    goto loop1;
+   				}
 				Filter_Hardware_with_ROM(romsize);
 				break;
 				
-			case 6:
+			case 5:
 				printf("\n=====> Enter RAM size\n");
-				scanf("%d", &ramsize);
+				loop2:
+				if (scanf("%d", &ramsize) != 1)
+				{
+   				    while (getchar() != '\n');
+    			    printf("\nError: Invalid RAM size. Please enter a valid RAM size.\n");
+    			    goto loop2;
+   				}
 				Filter_Hardware_with_RAM(ramsize);
 				break;
 
-			case 7:
+			case 6:
 				printf("\n=====> Enter Hardware OS\n");
-				scanf("%d", eat_new_line);
+				eat_new_line = getchar();
 				scanf("%[^\n]", os);
 				Filter_Hardware_with_OS(os);
 				break;
 			
-			case 8:
+			case 7:
 				printf("\n=====> Enter Hardware name\n");
-				scanf("%d", eat_new_line);
+				eat_new_line = getchar();
 				scanf("%[^\n]", hrdwr_name);
 				Search_hardware_by_name(hrdwr_name);
 				break;
 			
 			default :
-				printf("\n\n@@@@@@@@@@@@@@@@@ Enter the right choice @@@@@@@@@@@@@@@@@\n\n");				
+				printf("\n\nError: Enter the right choice\n\n");				
 		}
 	}
 }

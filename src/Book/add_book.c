@@ -9,14 +9,28 @@ void add_book()
 	int eat_new_line;
 	
 	printf("\n=====> Enter ISBN number\n");
-	scanf("%d", &isbn);
+	
+	here1 :
+	if (scanf("%d", &isbn) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid ISBN number.. Please enter a valid ISBN number.\n");
+        goto here1;
+    }
 	printf("\n=====> Enter Serial Number\n");
-	scanf("%d", &srl_num);
+	
+	here2 :
+	if (scanf("%d", &srl_num) != 1)
+	{
+        while (getchar() != '\n');
+        printf("\nError: Invalid Serial Number.. Please enter a valid Serial Number.\n");
+        goto here2;
+    }
 	printf("\n=====> Enter Author name\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", author);
 	printf("\n=====> Enter Book Title\n");
-	scanf("%d", eat_new_line);
+	eat_new_line = getchar();
 	scanf("%[^\n]", book_title);
 
 	struct book *buff = (struct book*)malloc(sizeof(struct book));
@@ -39,4 +53,5 @@ void add_book()
 		tail = buff;
 	}	
 	num_of_book_count++;
+	printf("\n\n****** Book Added Successfully ******\n\n");
 }

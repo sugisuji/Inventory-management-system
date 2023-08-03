@@ -1,0 +1,112 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Book/add_book.o Book/book.o Book/Delete_book.o Book/display_book.o Book/search_book.o Book/search_book_isbn.o Hardware/add_hardware.o Hardware/display_hardware.o Hardware/Filter_Hardware_with_OS.o Hardware/Filter_Hardware_with_RAM.o Hardware/Filter_Hardware_with_ROM.o Hardware/Filter_Hardware_with_type.o Hardware/hardware.o Hardware/Search_hardware_by_name.o Inventory/Add_Inventory.o Inventory/Delete_Inventory.o Inventory/Inventory_queries.o Software/add_software.o Software/display_software.o Software/Filter_Software_with_OS.o Software/Search_Software_by_name.o Software/software.o main.o Hardware/Delete_hardware.o Software/Delete_software.o Inventory/Update_Inventory.o Book/Update_book.o Hardware/Update_hardware.o Software/Update_software.o
+LINKOBJ  = Book/add_book.o Book/book.o Book/Delete_book.o Book/display_book.o Book/search_book.o Book/search_book_isbn.o Hardware/add_hardware.o Hardware/display_hardware.o Hardware/Filter_Hardware_with_OS.o Hardware/Filter_Hardware_with_RAM.o Hardware/Filter_Hardware_with_ROM.o Hardware/Filter_Hardware_with_type.o Hardware/hardware.o Hardware/Search_hardware_by_name.o Inventory/Add_Inventory.o Inventory/Delete_Inventory.o Inventory/Inventory_queries.o Software/add_software.o Software/display_software.o Software/Filter_Software_with_OS.o Software/Search_Software_by_name.o Software/software.o main.o Hardware/Delete_hardware.o Software/Delete_software.o Inventory/Update_Inventory.o Book/Update_book.o Hardware/Update_hardware.o Software/Update_software.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Book/add_book.o: Book/add_book.c
+	$(CC) -c Book/add_book.c -o Book/add_book.o $(CFLAGS)
+
+Book/book.o: Book/book.c
+	$(CC) -c Book/book.c -o Book/book.o $(CFLAGS)
+
+Book/Delete_book.o: Book/Delete_book.c
+	$(CC) -c Book/Delete_book.c -o Book/Delete_book.o $(CFLAGS)
+
+Book/display_book.o: Book/display_book.c
+	$(CC) -c Book/display_book.c -o Book/display_book.o $(CFLAGS)
+
+Book/search_book.o: Book/search_book.c
+	$(CC) -c Book/search_book.c -o Book/search_book.o $(CFLAGS)
+
+Book/search_book_isbn.o: Book/search_book_isbn.c
+	$(CC) -c Book/search_book_isbn.c -o Book/search_book_isbn.o $(CFLAGS)
+
+Hardware/add_hardware.o: Hardware/add_hardware.c
+	$(CC) -c Hardware/add_hardware.c -o Hardware/add_hardware.o $(CFLAGS)
+
+Hardware/display_hardware.o: Hardware/display_hardware.c
+	$(CC) -c Hardware/display_hardware.c -o Hardware/display_hardware.o $(CFLAGS)
+
+Hardware/Filter_Hardware_with_OS.o: Hardware/Filter_Hardware_with_OS.c
+	$(CC) -c Hardware/Filter_Hardware_with_OS.c -o Hardware/Filter_Hardware_with_OS.o $(CFLAGS)
+
+Hardware/Filter_Hardware_with_RAM.o: Hardware/Filter_Hardware_with_RAM.c
+	$(CC) -c Hardware/Filter_Hardware_with_RAM.c -o Hardware/Filter_Hardware_with_RAM.o $(CFLAGS)
+
+Hardware/Filter_Hardware_with_ROM.o: Hardware/Filter_Hardware_with_ROM.c
+	$(CC) -c Hardware/Filter_Hardware_with_ROM.c -o Hardware/Filter_Hardware_with_ROM.o $(CFLAGS)
+
+Hardware/Filter_Hardware_with_type.o: Hardware/Filter_Hardware_with_type.c
+	$(CC) -c Hardware/Filter_Hardware_with_type.c -o Hardware/Filter_Hardware_with_type.o $(CFLAGS)
+
+Hardware/hardware.o: Hardware/hardware.c
+	$(CC) -c Hardware/hardware.c -o Hardware/hardware.o $(CFLAGS)
+
+Hardware/Search_hardware_by_name.o: Hardware/Search_hardware_by_name.c
+	$(CC) -c Hardware/Search_hardware_by_name.c -o Hardware/Search_hardware_by_name.o $(CFLAGS)
+
+Inventory/Add_Inventory.o: Inventory/Add_Inventory.c
+	$(CC) -c Inventory/Add_Inventory.c -o Inventory/Add_Inventory.o $(CFLAGS)
+
+Inventory/Delete_Inventory.o: Inventory/Delete_Inventory.c
+	$(CC) -c Inventory/Delete_Inventory.c -o Inventory/Delete_Inventory.o $(CFLAGS)
+
+Inventory/Inventory_queries.o: Inventory/Inventory_queries.c
+	$(CC) -c Inventory/Inventory_queries.c -o Inventory/Inventory_queries.o $(CFLAGS)
+
+Software/add_software.o: Software/add_software.c
+	$(CC) -c Software/add_software.c -o Software/add_software.o $(CFLAGS)
+
+Software/display_software.o: Software/display_software.c
+	$(CC) -c Software/display_software.c -o Software/display_software.o $(CFLAGS)
+
+Software/Filter_Software_with_OS.o: Software/Filter_Software_with_OS.c
+	$(CC) -c Software/Filter_Software_with_OS.c -o Software/Filter_Software_with_OS.o $(CFLAGS)
+
+Software/Search_Software_by_name.o: Software/Search_Software_by_name.c
+	$(CC) -c Software/Search_Software_by_name.c -o Software/Search_Software_by_name.o $(CFLAGS)
+
+Software/software.o: Software/software.c
+	$(CC) -c Software/software.c -o Software/software.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+Hardware/Delete_hardware.o: Hardware/Delete_hardware.c
+	$(CC) -c Hardware/Delete_hardware.c -o Hardware/Delete_hardware.o $(CFLAGS)
+
+Software/Delete_software.o: Software/Delete_software.c
+	$(CC) -c Software/Delete_software.c -o Software/Delete_software.o $(CFLAGS)
+
+Inventory/Update_Inventory.o: Inventory/Update_Inventory.c
+	$(CC) -c Inventory/Update_Inventory.c -o Inventory/Update_Inventory.o $(CFLAGS)
+
+Book/Update_book.o: Book/Update_book.c
+	$(CC) -c Book/Update_book.c -o Book/Update_book.o $(CFLAGS)
+
+Hardware/Update_hardware.o: Hardware/Update_hardware.c
+	$(CC) -c Hardware/Update_hardware.c -o Hardware/Update_hardware.o $(CFLAGS)
+
+Software/Update_software.o: Software/Update_software.c
+	$(CC) -c Software/Update_software.c -o Software/Update_software.o $(CFLAGS)

@@ -13,40 +13,42 @@ void software()
 	while(1)
 	{
 		printf("\n************* Enter your option *************\n");
-		printf("\nEXIT = 0 :: ADD_SOFTWARE = 1\n"); 
-		printf("\nCheck_what_are_the_software_available = 2\n");
-		printf("\nFilter_Software_with_OS = 3 :: Search_Software_by_name = 4\n ");
-		scanf("%d", &option);
-		
+		printf("\nEXIT = 0\n"); 
+		printf("\nCheck_what_are_the_software_available = 1\n");
+		printf("\nFilter_Software_with_OS = 2 :: Search_Software_by_name = 3\n ");
+
+		loop:
+		if (scanf("%d", &option) != 1)
+		{
+    	    while (getchar() != '\n');
+    	    printf("\nError: Invalid input. Please enter a valid option.\n");
+    	    goto loop;
+    	}
 		if(option == 0)
 			break;
 	
 		switch(option)
 		{
 			case 1:
-				add_software();
-				break;
-			
-			case 2:
 				display_software();
 				break;
 			
-			case 3:
+			case 2:
 				printf("\n=====> Enter Software OS\n");
-				scanf("%d", eat_new_line);
+				eat_new_line = getchar();
 				scanf("%[^\n]", os);
 				Filter_Software_with_OS(os);
 				break;
 			
-			case 4:
+			case 3:
 				printf("\n=====> Enter Software name\n");
-				scanf("%d", eat_new_line);
+				eat_new_line = getchar();
 				scanf("%[^\n]", sftwr_name);
 				Search_Software_by_name(sftwr_name);
 				break;
 			
 			default :
-				printf("\n\n@@@@@@@@@@@@@@@@@ enter the right choice @@@@@@@@@@@@@@@@@\n\n");				
+				printf("\n\nError: Enter the right choice\n\n");				
 		}
 	}
 }
