@@ -1,28 +1,5 @@
 #include "../header/software.h"
-
-int check_case_sense(char *sftwr_name, char *string)
-{
-//97 - 65 == 32
-	int i = 0;
-	
-	for(i = 0; sftwr_name[i] != '\0'; i++)
-	{
-		if((sftwr_name[i] >= 65) && (sftwr_name[i] <= 90))
-		{
-			sftwr_name[i] = sftwr_name[i] + 32;
-		}
-	}
-	
-	for(i = 0; string[i] != '\0'; i++)
-	{
-		if((string[i] >= 65) && (string[i] <= 90))
-		{
-			string[i] = string[i] + 32;
-		}
-	}
-	
-	return strcmp(sftwr_name, string);
-}
+#include "../header/header.h"
 
 void Update_software()
 {
@@ -47,9 +24,7 @@ void Update_software()
 		
 		while(temp != '\0')
 		{
-//			check_case_sense(sftwr_name, temp -> name);
-//			if(strcmp(sftwr_name, temp -> name) == 0)
-			if(check_case_sense(sftwr_name, temp -> name) == 0)
+			if(check_case_sense(sftwr_name, temp->name) == 0)
 			{
 				while(1)
 				{

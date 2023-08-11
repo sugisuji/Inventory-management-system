@@ -5,6 +5,7 @@ int main()
 {
 	int choice; 
 	
+	add_default_item();
 	while(1)
 	{
 		printf("\n>>>>>>>>>> Inventory Management System <<<<<<<<<<\n");

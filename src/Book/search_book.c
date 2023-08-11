@@ -17,7 +17,7 @@ void search_book(char *book_name)
 				printf("\n<<<<< %s >>>>\n", temp -> book_title);
 				printf("serial_num = %d\n", temp -> serial_number);
 				printf("Author = %s\n", temp -> author);
-				printf("isbn_number = %d\n", temp -> isbn_number);
+				printf("isbn_number = %ld\n", temp -> isbn_number);
 				return;
 			}
 			temp = temp -> next;

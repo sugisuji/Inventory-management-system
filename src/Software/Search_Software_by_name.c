@@ -13,7 +13,7 @@ void Search_Software_by_name(char *sftwr_name)
 		
 		while(temp != '\0')
 		{
-			if(strcmp(sftwr_name, temp -> name) == 0)
+			if(check_case_sense(sftwr_name, temp -> name) == 0)
 			{
 				printf("\n<<<<< Software %d in %s >>>>\n", i++, temp -> name);
 				printf("\nserial_num = %d\n", temp -> serial_number);

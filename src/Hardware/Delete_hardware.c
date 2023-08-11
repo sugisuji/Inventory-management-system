@@ -20,7 +20,7 @@ void Delete_hardware()
 		
 		while(temp != '\0')
 		{
-			if(strcmp(hrdwr_name, temp -> name) == 0)
+			if(check_case_sense(hrdwr_name, temp -> name) == 0)
 			{
 				if(temp == hrdwr_head)
 				{

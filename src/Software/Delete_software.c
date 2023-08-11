@@ -20,7 +20,7 @@ void Delete_software()
 		
 		while(temp != '\0')
 		{
-			if(strcmp(sftwr_name, temp -> name) == 0)
+			if(check_case_sense(sftwr_name, temp -> name) == 0)
 			{
 				if(temp == sftwr_head)
 				{

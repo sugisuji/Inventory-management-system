@@ -2,7 +2,7 @@
 
 void add_book()
 {
-	int isbn;
+	long int isbn;
 	int srl_num;
 	char *author = (char *)malloc(author_size * sizeof(char));
 	char *book_title = (char *)malloc(title_size * sizeof(char));
@@ -11,7 +11,7 @@ void add_book()
 	printf("\n=====> Enter ISBN number\n");
 	
 	here1 :
-	if (scanf("%d", &isbn) != 1)
+	if (scanf("%ld", &isbn) != 1)
 	{
         while (getchar() != '\n');
         printf("\nError: Invalid ISBN number.. Please enter a valid ISBN number.\n");

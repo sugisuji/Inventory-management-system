@@ -7,7 +7,7 @@ int num_of_book_count = 0;
 
 void book()
 {
-	int isbn;
+	long int isbn;
 	char *book_name = (char *)malloc(title_size * sizeof(char));
 	int eat_new_line;
 	int option;
@@ -45,7 +45,7 @@ void book()
 			case 3:
 				printf("\n=====> Enter ISBN number\n");
 				loop1:
-				if (scanf("%d", &isbn) != 1) {
+				if (scanf("%ld", &isbn) != 1) {
             		while (getchar() != '\n');
            			printf("\nError: Invalid ISBN number. Please enter a valid ISBN number.\n");
             		goto loop1;

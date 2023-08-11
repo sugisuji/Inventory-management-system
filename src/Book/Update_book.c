@@ -11,7 +11,7 @@ void Update_book()
 		struct book *temp = head;
 		
 		int choice;
-		int isbn;
+		long int isbn;
 		int srl_num;
 		char *author = (char *)malloc(author_size * sizeof(char));
 		char *book_name = (char *)malloc(title_size * sizeof(char));
@@ -23,7 +23,7 @@ void Update_book()
 		
 		while(temp != '\0')
 		{
-			if(strcmp(book_name, temp -> book_title) == 0)
+			if(check_case_sense(book_name, temp -> book_title) == 0)
 			{
 				while(1)
 				{
@@ -46,7 +46,7 @@ void Update_book()
     					case 1:
     						printf("\n=====> Enter ISBN number\n");
 							loop1:
-							if (scanf("%d", &isbn) != 1)
+							if (scanf("%ld", &isbn) != 1)
 							{
         						while (getchar() != '\n');
         						printf("\nError: Invalid ISBN number.. Please enter a valid ISBN number.\n");

@@ -12,7 +12,7 @@ void Search_hardware_by_name(char *hrdwr_name)
 		
 		while(temp != '\0')
 		{
-			if(strcmp(hrdwr_name, temp -> name) == 0)
+			if(check_case_sense(hrdwr_name, temp -> name) == 0)
 			{
 				printf("\n<<<<< hardware %d in %s >>>>\n", i++, temp -> name);
 				printf("\nserial_num = %d\n", temp -> serial_number);

@@ -20,7 +20,7 @@ void Delete_book()
 		
 		while(temp != '\0')
 		{
-			if(strcmp(book_name, temp -> book_title) == 0)
+			if(check_case_sense(book_name, temp -> book_title) == 0)
 			{
 				if(temp == head)
 				{

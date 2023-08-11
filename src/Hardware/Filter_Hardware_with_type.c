@@ -12,7 +12,7 @@ void Filter_Hardware_with_type(char *hrdwr_type)
 		
 		while(temp != '\0')
 		{
-			if(strcmp(hrdwr_type, temp -> hardware_type) == 0)
+			if(check_case_sense(hrdwr_type, temp -> hardware_type) == 0)
 			{
 				printf("\n<<<<< hardware %d with type %s >>>>\n", i++, temp -> hardware_type);
 				printf("\nserial_num = %d\n", temp -> serial_number);

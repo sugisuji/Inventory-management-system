@@ -21,3 +21,4 @@ void Update_software();
 void display_software();
 void Search_Software_by_name(char*);
 void Filter_Software_with_OS(char*);
+int check_case_sense(char*, char*);

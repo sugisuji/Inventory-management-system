@@ -13,7 +13,7 @@ void Filter_Software_with_OS(char *os)
 		
 		while(temp != '\0')
 		{
-			if(strcmp(os, temp -> sftwr_os) == 0)
+			if(check_case_sense(os, temp -> sftwr_os) == 0)
 			{
 				printf("\n<<<<< Software %d with OS %s >>>>\n", i++, temp -> sftwr_os);
 				printf("\nserial_num = %d\n", temp -> serial_number);
